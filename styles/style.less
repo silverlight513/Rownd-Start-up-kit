@@ -1,0 +1,339 @@
+/*
+  http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+  (has been edited)
+*/
+
+html, body, div, span, applet, object, iframe,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+// /* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  Entypo Font
+ */
+@import url('http://weloveiconfonts.com/api/?family=entypo');
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+
+/*
+  Main CSS file for http://silverlight513.github.io/Rownd
+ */
+
+/*
+  Variables
+ */
+@blue:        #00CEAF;
+@dark-blue:   #2B3840;
+
+body, html {
+  width: 100%;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+/*
+  Main Header section
+ */
+.header {
+  height: 70vh;
+  padding: 25px;
+  background: -moz-linear-gradient(top, rgba(43, 56, 64,0.80) 0%, rgba(43, 56, 64,1) 80%, rgba(43, 56, 64,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba( 43, 56, 64,0.80) 0%,rgba(43, 56, 64,1) 80%,rgba( 43, 56, 64,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba( 43, 56, 64,0.80) 0%,rgba(43, 56, 64,1) 80%,rgba( 43, 56, 64,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  position: relative;
+  color: #FFF;
+
+  .background {
+    width: 100%;
+    height: 70vh;
+    z-index: -1;
+    background-image: url('worms-head.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .top-bar {
+    width: 100%;
+    padding: 0px;
+    height: 22px;
+    font-weight: 300;
+    font-size: 14px;
+
+    span {
+      float: right;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-bottom: 5px;
+      a {
+        color: #9AA2A7;
+        text-decoration: none;
+      }
+    }
+
+    .highlighted {
+      border-bottom: 2px solid @blue;
+      a {
+        color: #FFF;
+      }
+    }
+  }
+
+  .title {
+    position: absolute;
+    top: 50%;
+    margin-top: -37px;
+    width: 100%;
+    max-width: ~"calc(100vw - 50px)";
+    text-align: center;
+    font-size: 54px;
+    font-weight: 300;
+
+    small {
+      display: block;
+      font-size: 20px;
+      color: #CCC;
+      font-weight: 400;
+    }
+  }
+
+  .quick-links {
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    width: 100%;
+    max-width: ~"calc(100vw - 50px)";
+
+    a {
+      text-decoration: none;
+    }
+
+    span {
+      color: @blue;
+      background-color: #FFF;
+      width: 45px;
+      height: 45px;
+      line-height: 1.5;
+      margin-left: 10px;
+      margin-right: 10px;
+      border-radius: 50%;
+      display: inline-block;
+
+      &:before {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.main-nav {
+  width: 100%;
+  margin-bottom: 42px;
+  margin-top: 32px;
+
+  ul {
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+    li {
+      display: inline-block;
+      width: 33%;
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+      border-bottom: 2px solid #EFEFEF;
+
+      &:hover {
+        border-bottom: 2px solid @blue;
+        cursor: pointer;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+ul.styled-list {
+  padding-left: 22px;
+
+  li {
+    line-height: 1.4;
+    list-style-position: inside;
+    list-style-type: initial;
+    margin-bottom: 10px;
+
+    .first {
+      font-weight: bold;
+    }
+  }
+}
+
+section {
+  max-width: 350px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0 auto;
+
+  p {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  code.inline {
+    font-family: 'Fira Mono',sans-serif;
+    padding: 0 3px;
+    white-space: pre-wrap;
+    border: 1px solid #DDD;
+    background: #EFEFEF;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+
+  pre {
+    border: 1px solid #333;
+    background: #23241f;
+    border-radius: 3px;
+    font-size: 15px;
+  }
+
+  h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+    color: @blue;
+    text-rendering: optimizeLegibility;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3, h2 {
+    font-size: 32px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover .page-anchor {
+      opacity: 1;
+    }
+
+    .page-anchor {
+      position: absolute;
+      left: -40px;
+      transition: all 0.5s ease;
+      opacity: 0;
+    }
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  a {
+    color: @blue;
+    text-decoration: none;
+  }
+
+  .doc-section {
+    margin-bottom: 82px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #DDD;
+  }
+}
+
+// tablet
+@media(min-width: 700px) {
+  section {
+    max-width: 523px;
+  }
+  .main-nav {
+    margin-bottom: 124px;
+    margin-top: 54px;
+    ul {
+      width: 600px;
+      li {
+        width: 200px;
+      }
+    }
+  }
+  .header .top-bar {
+    width: ~"calc(100% - 50px)";
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+// small desktop
+@media(min-width: 1000px) {
+  section {
+    max-width: 700px;
+  }
+}
+
+// large desktop
+@media(min-width: 1200px) {
+  section {
+    max-width: 960px;
+  }
+}
+
+/*
+  Helpers
+ */
+.right {
+  float: right !important;
+}
+
+.left {
+  float: left !important;
+}
