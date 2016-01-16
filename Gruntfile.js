@@ -137,16 +137,6 @@ module.exports = function(grunt) {
     .filterDev('grunt-*')
     .forEach(grunt.loadNpmTasks);
 
-  // With watch
-  grunt.registerTask('watch', [
-    'concat',
-    'jshint',
-    'ractive',
-    'copy',
-    'watch']
-  );
-
-  // No watch
   grunt.registerTask('default', [
     'concat',
     'jshint',

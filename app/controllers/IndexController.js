@@ -9,7 +9,7 @@ App.createController('index', {
   },
 
   'controller': function(routeData){
-    console.log('This is the index route.');
+    console.log('This is the index route. Route data below:');
     console.log(routeData);
   },
 
