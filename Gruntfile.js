@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       }
     },
 
-    ractive: {
+    rownd_compile: {
       template: {
         src: 'app/views/**/*.handlebars',
         dest: 'dist/assets/js/project-templates.js'
@@ -102,46 +102,26 @@ module.exports = function(grunt) {
       },
       templates: {
         files: ['app/views/**/*.handlebars'],
-        tasks: ['ractive']
+        tasks: ['rownd_compile']
       }
     }
 
   });
 
-    // The ractive task - Should probably be moved to it's own repo
-    // or replaced with a working one
-    var desc = 'Compile ractive.js templates',
-      path = require('path'),
-      Ractive = require('ractive');
 
-    grunt.registerMultiTask('ractive', desc, make);
-    function make(){
-        this.files.forEach(function(file){
-            var templates = file.src.map(parse);
-            grunt.file.write(file.dest,
-                'Rownd.templates = {\n' + templates.join(',\n') + '\n}');
-        });
-    }
-
-    function parse(template){
-        var name = path.basename(template, '.handlebars'),
-            html = grunt.file.read(template),
-            parsed = Ractive.parse(html);
-
-        return  '\t' + name + ': ' + JSON.stringify(parsed);
-    }
-    // End of ractive task
 
   // Load all of Grunt's dependencies
   require('matchdep')
     .filterDev('grunt-*')
     .forEach(grunt.loadNpmTasks);
 
+  grunt.loadNpmTasks('rownd-ractive-compiler');
+
   grunt.registerTask('default', [
     'concat',
     'jshint',
     'uglify',
-    'ractive',
+    'rownd_compile',
     'copy']
   );
 

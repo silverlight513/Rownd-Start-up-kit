@@ -15,7 +15,8 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "^0.6.1",
-    "ractive": "^0.7.3"
+    "ractive": "^0.7.3",
+    "rownd-ractive-compiler": "^1.0.0"
   },
   "dependencies": {
     "matchdep": "^0.3.0",
