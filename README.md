@@ -1,6 +1,6 @@
 #Rownd Start Up Kit
 
-> A boilerplate for Rownd.js for project structure with grunt for quick and easy setting up.
+> A boilerplate for [Rownd.js](http://silverlight513.github.io/Rownd/) for project structure with grunt for quick and easy setting up.
 
 ##Getting started
 
