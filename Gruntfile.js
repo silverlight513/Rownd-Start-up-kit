@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       ractiveMap: {
         files: [{
           expand: true,
-          cwd: 'libs/ractive/',
+          cwd: 'node_modules/ractive/',
           src: ['ractive.js.map'],
           dest: 'dist/assets/js/'
         }]
@@ -60,6 +60,14 @@ module.exports = function(grunt) {
           cwd: 'app/styles/',
           src: ['**.css'],
           dest: 'dist/assets/css/'
+        }]
+      },
+      images: {
+        files: [{
+          expand: true,
+          cwd: 'app/images',
+          src: ['**/*'],
+          dest: 'dist/assets/images/'
         }]
       }
     },
@@ -94,7 +102,7 @@ module.exports = function(grunt) {
     watch: {
       index: {
         files: ['app/{,*/}*.html'],
-        tasks: ['copy:index', 'targethtml:dev']
+        tasks: ['copy:index']
       },
       app: {
         files: ['app/**/*.js'],
