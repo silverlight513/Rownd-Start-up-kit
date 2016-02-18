@@ -1,5 +1,4 @@
 {
-  "predef": [ "Highwayman" ],
   "browser": true,
   "camelcase": true,
   "eqeqeq": true,
