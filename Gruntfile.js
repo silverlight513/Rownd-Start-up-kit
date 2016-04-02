@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       }
     },
 
-    rowndCompile: {
+    rownd_compile: {
       template: {
         src: 'app/views/**/*.handlebars',
         dest: 'dist/assets/js/project-templates.js'
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
       },
       templates: {
         files: ['app/views/**/*.handlebars'],
-        tasks: ['rowndCompile']
+        tasks: ['rownd_compile']
       }
     }
 
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
     'concat',
     'jshint',
     'uglify',
-    'rowndCompile',
+    'rownd_compile',
     'copy',
     'watch']
   );
