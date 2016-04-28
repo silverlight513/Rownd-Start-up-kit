@@ -1,6 +1,6 @@
 {
   "name": "projectname",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "projectname",
   "main": "Gruntfile.js",
   "scripts": {
@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "matchdep": "^0.3.0",
-    "rownd": "^0.3.2"
+    "rownd": "^0.4.3"
   }
 }
