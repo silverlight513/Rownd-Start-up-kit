@@ -19,6 +19,7 @@
     "rownd-ractive-compiler": "^2.0.1"
   },
   "dependencies": {
+    "express": "^4.13.4",
     "matchdep": "^0.3.0",
     "rownd": "^0.4.3"
   }
