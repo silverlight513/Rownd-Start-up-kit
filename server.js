@@ -4,10 +4,14 @@ var app = express();
 // Host the assets directory
 app.use('/assets', express.static(__dirname + '/dist/assets/'));
 
+var router = express.Router();
+
 // Host the Rownd application on the root page
-app.get('/', function(req, res) {
+router.route('*').get(function(req, res) {
   res.sendFile(__dirname + '/dist/index.html');
 });
+
+app.use('/', router);
 
 var port = process.argv[2] || '2020';
 

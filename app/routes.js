@@ -6,7 +6,8 @@
 */
 
 var rnd = Rownd.start({
-  debug: false
+  debug: false,
+  useHistory: true
 });
 
 // An example index route
