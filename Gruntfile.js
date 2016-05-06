@@ -130,8 +130,14 @@ module.exports = function(grunt) {
     'jshint',
     'uglify',
     'rownd_compile',
+    'copy']
+  );
+
+  grunt.registerTask('dev', [
+    'concat',
+    'jshint',
+    'rownd_compile',
     'copy',
     'watch']
   );
-
 };
