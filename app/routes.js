@@ -16,6 +16,16 @@ rnd.createRoute({
   'path' : ''
 });
 
+rnd.createRoute({
+  'controller' : 'index',
+  'path' : '/other'
+});
+
+rnd.createRoute({
+  'controller' : 'index',
+  'path' : '/another'
+});
+
 // The 404 handler
 rnd.notFound = function(){
   Rownd.generateTemplate({template: '404'});
